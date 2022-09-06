@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrentWeather} from '../CurrentWeather'
+import { PlaceService } from '../place.service';
 
 @Component({
   selector: 'app-weather-result',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherResultComponent implements OnInit {
 
-  constructor() { }
+  currentWeatherResult:CurrentWeather = {
+    clouds: "strong clouds",
+    feelslike: 25,
+    pressure: 1016,
+    temp: 17,
+    wind: 7.15
+  }
+
+
+  constructor(public placeservice:PlaceService) { }
 
   ngOnInit(): void {
   }

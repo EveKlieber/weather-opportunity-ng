@@ -1,1 +1,14 @@
-<p>weather-result works!</p>
+<div>
+
+<li class="temp-cold " [class.temp-hot]=" currentWeatherResult.temp >20">{{currentWeatherResult.temp}} ° temp</li>
+
+<li [ngClass]="{'temp-cold': currentWeatherResult.feelslike <20, 
+'temp-hot':currentWeatherResult.feelslike >=20}">{{currentWeatherResult.feelslike}} ° feels like</li>
+
+<li></li>
+<li></li>
+<li></li>
+
+
+
+</div>

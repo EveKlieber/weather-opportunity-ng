@@ -1,0 +1,20 @@
+<div className="page_weather">
+
+  <h2>get current weather ...</h2>
+
+  <div class="input-location">
+    <label>your location: </label><br />
+    <input 
+        name="input-location"
+        type="text" 
+        class="form-control"
+        [(ngModel)]="locationName"
+        #location='ngModel'
+        (change)="log(location)"
+        >
+    <button (click)="addLocation(location.value)" >Send</button>
+  </div>
+
+    <p>{{ placeservice.place }}</p>
+
+</div>
