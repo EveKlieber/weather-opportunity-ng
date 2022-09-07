@@ -13,9 +13,7 @@ export class PlaceService {
   // stream auf den wir hören können:
   dataString$ = this.stringSource.asObservable()
   constructor(private http: HttpClient) {   // http obj folgt klasse HttpClient.
-
   }
-
 
   addPlace(place: string) {
     this.place = place;
