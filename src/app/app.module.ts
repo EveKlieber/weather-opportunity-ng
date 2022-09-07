@@ -7,6 +7,7 @@ import { TemperatureComponent } from './temperature/temperature.component';
 import { WeatherResultComponent } from './weather-result/weather-result.component';
 import { HeaderComponent } from './header/header.component';
 import { WeatherForecastPageComponent } from './weather-forecast-page/weather-forecast-page.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WeatherForecastPageComponent } from './weather-forecast-page/weather-fo
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

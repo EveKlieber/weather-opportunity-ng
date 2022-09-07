@@ -1,3 +1,4 @@
+import { TranslationWidth } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { PlaceService } from '../place.service';
 
@@ -13,7 +14,7 @@ export class WeatherForecastPageComponent implements OnInit {
   output = ""
   
   constructor(public placeservice:PlaceService) { 
-    this.output = placeservice.place
+    // this.output = placeservice.place
   }
 
   log(location:any) {
@@ -21,11 +22,13 @@ export class WeatherForecastPageComponent implements OnInit {
   }
 
   addLocation(location:string) {
-    this.placeservice.addPlace(location);
+    // this.placeservice.addPlace(location);
+    this.placeservice.getWeather(location);
     this.locationName="";
   }
 
   ngOnInit(): void {
+    this.placeservice.dataString$.subscribe(placeInput => this.output = placeInput) // callbike like then
   }
 
 
