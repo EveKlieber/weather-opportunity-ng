@@ -17,7 +17,7 @@ export class PlaceService {
 
   addPlace(place: string) {
     this.place = place;
-    this.stringSource.next(place); // weitergabe mit next
+    this.stringSource.next(place); // weitergabe mit next - wie setter func
     console.log(this.place)
     return this.place
   }
@@ -27,7 +27,7 @@ export class PlaceService {
      .subscribe(  data => console.log(data) )
   }
 
-  fetchWeatherData(place: string): Observable<any> {  // observable -> art promise
+  fetchWeatherData(place: string): Observable<any> {  // liefert observable zurück -> art promise
     return this.http.post<any>('http://localhost:8080/getweather', { city: place }, this.options
     )
   }
