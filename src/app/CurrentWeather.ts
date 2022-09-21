@@ -1,7 +1,7 @@
 export interface CurrentWeather  {
-  clouds:String,
+  description: String;
   feelslike: Number,
   pressure: Number,
   temp: Number,
-  wind: Number,
+  wind?: Number,
 }
